@@ -1,0 +1,6 @@
+mario pyramid
+
+1. prompt user for height
+2. print # 
+3. loop to second columm
+4. print .
