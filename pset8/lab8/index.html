@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            function checkPart1(boolean, position) {
+                for (let i = 0; i < 5; i++) {
+                    document.getElementsByClassName('part1')[i].style.background = '#d9edff';
+                }
+
+                if (boolean == 'T') {
+                    document.getElementById('correctPart1').style.display = 'block';
+                    document.getElementById('falsePart1').style.display = 'none';
+                    document.getElementsByClassName('part1')[position].style.background = 'green';
+                }
+                else {
+                    document.getElementById('correctPart1').style.display = 'none';
+                    document.getElementById('falsePart1').style.display = 'block';
+                    document.getElementsByClassName('part1')[position].style.background = 'red';
+                }
+            }
+
+
+            function checkPart2() {
+                var answer = document.getElementById('textField').value.toLowerCase();
+
+                if (answer == 'switzerland') {
+                    document.getElementById('textField').style.border = 'solid green';
+                    document.getElementById('correctPart2').style.display = 'block';
+                    document.getElementById('falsePart2').style.display = 'none';
+                }
+                else {
+                    document.getElementById('textField').style.border = 'solid red';
+                    document.getElementById('correctPart2').style.display = 'none';
+                    document.getElementById('falsePart2').style.display = 'block';
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button class='part1' onclick="checkPart1('F', 0)">6 people per 1 sheep</button>
+                <button class='part1' onclick="checkPart1('F', 1)">3 people per 1 sheep</button>
+                <button class='part1' onclick="checkPart1('F', 2)">1 person per 1 sheep</button>
+                <button class='part1' onclick="checkPart1('F', 3)">1 person per 3 sheep</button>
+                <button class='part1' onclick="checkPart1('T', 4)">1 person per 6 sheep</button>
+
+                <div id='correctPart1'>
+                    Correct!
+                </div>
+                <div id='falsePart1'>
+                    Incorrect.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type='text' id='textField'>
+                <button type='submit' name='submitBtn' onclick='checkPart2()'>Check Answer</button>
+
+                <div id='correctPart2'>
+                    Correct!
+                </div>
+                <div id='falsePart2'>
+                    Incorrect.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
