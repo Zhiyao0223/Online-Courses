@@ -1,4 +1,4 @@
-# CS50-courses
+# Online Courses
 All material and codes of self learning online courses will be situated here.
 
 Courses Attend:
