@@ -1,2 +1,5 @@
 # CS50-courses
-A self learning course. All my previous code will be put here
+All material and codes of self learning online courses will be situated here.
+
+Courses Attend:
+CS50 https://cs50.harvard.edu/x/2023/
